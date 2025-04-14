@@ -1,0 +1,359 @@
+* {
+    background-color: #000000;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+[data-aos] {
+  opacity: 0; /* Elementos invisibles inicialmente */
+  transition: opacity 1s ease-in-out; /* Suaviza la transición de la animación */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+header {
+background-color: #000000;
+  height: 50px;
+  display: flex;
+  position: fixed; 
+  top: 0;          
+  left: 0;         
+  width: 100%;     
+  z-index: 1000;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+.navbar ul li a:hover {
+  color: rgb(68, 5, 68);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.hamburguesa {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
+#bg-video {
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 30%;
+  z-index: -1; /* Lo manda al fondo */
+}
+
+#Inicio {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: larger;
+}
+
+#SobreMi {
+  background-color: #000000;
+  margin-top: 80px;
+}
+
+h2 {
+  font-size: xx-large;
+  font-style: oblique;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: #000000; 
+  margin-bottom: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+ } 
+   
+  p {
+  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: large;
+  font-family: serif;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+  justify-content: baseline;
+  font-family: sans-serif;
+  }
+
+  p a {
+    background-color: #000000;
+    color: #8617a2;
+  }
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 1px 2px 3px 4px hsla(0, 0%, 0%, 0.25);
+  border-radius: 10px;
+}
+
+.image {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 16px;
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+  translate: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-button {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+  border-radius: 50%;
+}
+
+.slider-button:hover {
+  opacity: 100;
+}
+
+#Contáctame {
+  padding: 40px;
+  margin-top: 300px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
+}
+
+.logo-icon {
+  width: 40px;    
+  height: auto;   
+  margin: 5px;   
+  vertical-align: middle; 
+}
+
+
+
+/* Pantallas pequeñas (teléfonos) */
+@media(max-width:500px) {
+  body {
+    font-size: 15px;
+  }
+  header {
+    height: 50px;
+    background-color: #000000;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;
+  }
+  .hamburguesa {
+      display: block;
+      position: fixed;
+      background-color: #000000;
+  }
+
+  .hamburguesa.active .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburguesa.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburguesa.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+      position: fixed; 
+      left: -100%;
+      top: 50px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #000000;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+
+  .navbar{
+    background-color: #000000;
+    height: 50px;
+  }
+
+  .nav-link {
+      margin: 16px 0;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item{
+    background-color: #000000;
+    font-family: sans-serif;
+    font-size: larger;
+    padding: 20px;
+   }
+  
+   .nav-item a{
+    background-color: #000000;
+   }
+   
+   .slider-nav {
+    background-color: #000000;
+   }
+  }
+  
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 408px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    background-color: #000000;
+    height: 50px;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;
+  }
+
+  .hamburguesa {
+    display: block;
+    position: fixed;
+    background-color: #000000;
+}
+
+.hamburguesa.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburguesa.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburguesa.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu {
+    position: fixed; 
+    left: -100%;
+    top: 50px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #000000;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.navbar{
+  background-color: #000000;
+  height: 50px;
+}
+
+.nav-link {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+ .nav-item{
+  background-color: #000000;
+  font-family: sans-serif;
+  font-size: larger;
+  padding: 20px;
+ }
+
+ .nav-item a{
+  background-color: #000000;
+ }
+
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+
+  header {
+    height: 50px;
+    width: 100%;
+  }
+}
+p a {
+  background-color: #000000;
+  color: #8617a2;
+  
+}
+
+#SobreMi {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

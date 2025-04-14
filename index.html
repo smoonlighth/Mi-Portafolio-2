@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body>
+  <!-- CSS de AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- JS de AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<header>
+      <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#Inicio">Inicio</a></li>
+                <li class="nav-item"><a href="#SobreMi">Sobre Mi</a></li>
+                <li class="nav-item"><a href="#Contáctame">Contáctame</a></li>
+            </ul>
+    
+        <div class="hamburguesa">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </nav>
+    <script src="script.js"></script>
+</header>
+
+
+<div id="Inicio">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="fotos/Sabrina Hernández.mp4" type="video/mp4" >
+    </video> 
+</div>
+
+<div id="SobreMi" data-aos="fade-in" data-aos-delay="300" data-aos-duration="1000">
+    <br><h2>Sobre Mi</h2>
+    <p>¡Hola! Me llamo Sabrina, tengo 20 años y soy de Canelones, Uruguay.</p>
+    <p>Soy técnica en Turismo, mi interés por este rubro surgió cuando tenía 15 años, lo que me llevó a cursar el bachillerato tecnológico en la UTU.</p>
+    <p>Terminé el bachillerato en 2022 y me inscribí en el Instituto Turístico Hotelero del Uruguay (ITHU), del cual me gradué como técnica en diciembre del 2023.</p>
+    <p>Luego de terminar la carrera tuve la oportunidad de hacer una pasantía en el Ministerio de Turismo (<a href="#slider-4">abajo</a> te cuento un poco más).</p>
+    <p>En 2024 me inscribí en Jóvenes a Programar, donde me formé en Desarrollo Web, lo cual me apasiona.</p>
+    <p>Este año planeo seguir formándome en el rubro tecnológico. Mi objetivo es crecer profesionalmente en el mundo TI y fusionar mis conocimientos en turismo y desarrollo para crear plataformas relacionadas a los viajes. </p>
+
+<section id="container" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+  <div class="slider-wrapper">
+    <div class="slider">
+      <img src="./fotos/1.png" id="slider-1" alt="educación" class="image" data-aos="fade-up" />
+      <img src="./fotos/2.png" id="slider-2" alt="idiomas" class="image" data-aos="fade-up" />
+      <img src="fotos/3.png" id="slider-3" alt="habilidades" class="image" data-aos="fade-up" />
+      <img src="./fotos/4.png" id="slider-4" alt="experiencia" class="image" data-aos="fade-up" />
+    </div>
+
+    <div class="slider-nav">
+      <a href="#slider-1" class="slider-button"></a>
+      <a href="#slider-2" class="slider-button"></a>
+      <a href="#slider-3" class="slider-button"></a>
+      <a href="#slider-4" class="slider-button"></a>
+    </div>
+  </div>
+</section>
+
+
+  <div id="Contáctame" data-aos="fade-in" data-aos-delay="400" data-aos-duration="1000">
+    <h2>Contáctame</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/smoonlighth">
+          <img src="fotos/github.png" alt="GitHub" class="logo-icon">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/sabrina-hern%C3%A1ndez-280392242?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bl%2Fc%2F8os7RjOb%2FAmM2pxR1g%3D%3D">
+          <img src="fotos/linkedin.png" alt="LinkedIn" class="logo-icon">
+        </a>
+      </li>
+      <li>
+       <a href="mailto:sabrinahmbusiness@gmail.com">
+        <img src="fotos/gmail.png" alt="Gmail" class="logo-icon">
+       </a> 
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  
+  <script>
+    AOS.init();
+  </script>
+  
+
+</body>
+</html>
